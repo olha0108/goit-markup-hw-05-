@@ -144,18 +144,6 @@ body {
 .header-head {
   color: var(--primary-color);
 }
-.icon-envelop {
-  max-height: 16px;
-  margin-right: auto;
-}
-
-.icon-envelop:before {
-  content: "";
-  display: inline-block;
-  background: url("./images/symbol-defs.svg#icon-envelop") no-repeat top right;
-  width: 14px;
-  height: 12px;
-}
 
 .head-phone {
   margin-left: 50px;
@@ -164,6 +152,11 @@ body {
 .head-mail-list {
   display: flex;
   margin-left: auto;
+}
+
+.head-mail {
+  align-items: baseline;
+  margin-right: 10px;
 }
 
 .banner {
@@ -316,8 +309,17 @@ body {
   margin-top: 16px;
 }
 .comanda-social-item {
-  width: calc((100% - 30px) / 4);
+  width: 44px;
+  height: 44px;
   margin-right: 10px;
+}
+.comanda-social-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
 
 .social {
@@ -325,31 +327,24 @@ body {
   max-height: 20px;
   fill: var(--client-grey);
 }
-.social:hover {
-  fill: var(--white-color);
-}
 
-.button-social {
-  background-color: var(--white-color);
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: none;
-  padding: 0;
-}
-.button-social:hover,
-.button-social:focus,
+.comanda-social-link:hover,
+.comanda-social-link:focus,
 .button-social-kontakt:hover,
 .button-social-kontakt:focus {
   background-color: var(--accent-color);
 }
 
+.comanda-social-link:hover .social,
+.comanda-social-link:focus .social {
+  fill: var(--white-color);
+}
 .comanda {
   text-align: center;
   background-color: var(--white-color);
 }
 
-.comanda-item {box-sizing:border-box
+.comanda-item {
   background-color: var(--white-color);
   flex-wrap: wrap;
   width: calc((100% - 90px) / 4);
@@ -358,36 +353,35 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-
-.client-grey-item {
-  background-color: var(--white-color);
-  margin-right: 30px;
+.client-item {
   width: 170px;
   height: 92px;
+  margin-right: 30px;
+}
+
+.client-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
   border-radius: 4px;
   border: 1px solid var(--client-grey);
-  padding: 0;
 }
-.client-grey-item:hover, 
-.client-grey-item:focus {
-  border: 1px solid var(--accent-color);
-
-}
-
-
-
-.icon-client {fill:var(--client-grey);
+.icon-client {
+  fill: var(--client-grey);
   align-content: center;
   max-width: 106px;
   max-height: 60px;
 }
-
-
-.icon-client:hover, .icon-client:focus {
-fill: var(--accent-color);
+.client-link:hover,
+.client-link:focus {
+  border: 1px solid var(--accent-color);
 }
-
-
+.client-link:hover .icon-client,
+.client-link:focus .icon-client {
+  fill: var(--accent-color);
+}
 
 .comanda-title {
   font-weight: 500;
@@ -462,25 +456,25 @@ img {
   margin-top: 9px;
 }
 
-.kontakt-social{align-items: baseline;}
+.kontakt-social {
+  align-items: baseline;
+}
 
 .kontakt-social-left {
   display: inline-block;
-margin-right: 70px;
+  margin-right: 70px;
 }
 .kontakt-social-right {
   display: inline-block;
-
 }
 
-.kontakt-social-title{text-transform: uppercase;
-font-weight: 700;
-color: var(--white-color);
-font-size: 14px;
-margin-bottom: 20px;}
-
-
-
+.kontakt-social-title {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--white-color);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
 
 .kontakt-light:hover,
 .kontakt-light:focus,
@@ -502,21 +496,18 @@ margin-bottom: 20px;}
   overflow: hidden;
 }
 
-
-
-.kontakt-social-svg {max-width: 20px;
-max-height: 20px;
+.kontakt-social-svg {
+  max-width: 20px;
+  max-height: 20px;
   fill: var(--white-color);
 }
 
 .button-social-kontakt {
   background-color: rgba(100, 100, 100, 0.25);
-    width: 44px;
+  width: 44px;
   height: 44px;
   border-radius: 50%;
   border: none;
   padding: 0;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-
-
