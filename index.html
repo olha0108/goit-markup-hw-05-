@@ -51,12 +51,22 @@
       </div>
     </header>
     <main>
+
+
       <section class="banner overlay">
         <div class="container">
           <h1 class="banner-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="button-primary">Заказать услугу</button>
+          <button type="button" class="button-primary" data-modal-open>Заказать услугу</button>
+
         </div>
       </section>
+                      <div class="backdrop is-hidden" data-modal>
+                        <div class="modal">
+                          <button type="button" class="button-close" data-modal-close><svg class="icon-svg">
+                            <use href="./images/symbol-defs.svg#icon-vector"></use>
+                          </svg></button>
+                        </div>
+                      </div>
       <section class="section">
         <div class="container">
           <h2 class="visually-hidden"></h2>
@@ -102,23 +112,25 @@
           </ul>
         </div>
       </section>
+
       <section class="section work">
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
           <ul class="our-work">
             <li class="our-work-item">
+              <div class="thumb">
               <img src="./images/img-1.jpg" alt="Верстка" width="370" />
-            </li>
-            <li class="our-work-item">
+            <p class="label">Десктопные приложения</p></div></li>
+            <li class="our-work-item"><div class="thumb">
               <img
                 src="./images/img-2.jpg"
                 alt="Мобильная версия"
                 width="370"
-              />
+              /><p class="label">Мобильные приложения</p></div>
             </li>
-            <li class="our-work-item">
+            <li class="our-work-item"><div class="thumb">
               <img src="./images/img-3.jpg" alt="Подброр цветов" width="370" />
-            </li>
+            <p class="label">Дизайнерские решения</p></div></li>
           </ul>
         </div>
       </section>
@@ -327,6 +339,6 @@
 </ul>
 </div>
       </div>
-    </footer>
+    </footer><script src="./js/modal.js"></script>
   </body>
 </html>
